@@ -8,9 +8,7 @@ const TodoList = () => {
     if (editID) {
       const edit = addTask.find((i) => i.id === editID);
       const updatedTodo = addTask.map((e) =>
-        e.id === edit.id
-          ? (e = { e: e.id, value })
-          : { id: e.id, value: e.value }
+        e.id === edit.id ? { e: e.id, value } : { id: e.id, value: e.value }
       );
       setAddTask(updatedTodo);
       setValue("");
